@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) 2017. Volodumur Hryvinskyi.  All rights reserved.
+  ~ @author: <mailto:volodumur@hryvinskyi.com>
+  ~ @github: <https://github.com/scriptua>
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="script" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Quick View</label>
+            <tab>script</tab>
+
+            <resource>Script_QuickView::config_quickview</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="button_label" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Button label</label>
+                    <comment>Label for Quick View button.</comment>
+                </field>
+                <field id="item_class" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Specify Product Items (class) to show Quick View button</label>
+                    <comment>Default is .product-item You can specify multiple CSS classes here, separated by coma (,).</comment>
+                </field>
+                <field id="btn_container" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Append Quick View Buttons To</label>
+                    <comment>Specify custom CSS class for the container. Default is .product-item-info</comment>
+                </field>
+            </group>
+
+            <group id="popup_settings" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Popup Settings</label>
+                <field id="transition" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Transition Effect</label>
+                    <comment>Select the type of transition effect for Quick View popup.</comment>
+                    <options>
+                        <option label="Elastic">elastic</option>
+                        <option label="Fade">fade</option>
+                        <option label="None">none</option>
+                    </options>
+                </field>
+                <field id="transition_speed" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Transition Speed</label>
+                    <comment>Set the speed of the transition, in milliseconds.</comment>
+                </field>
+                <field id="initial_width" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Initial Width</label>
+                    <comment>Set the initial width of the popup content when the Quick View starts, in pixel</comment>
+                </field>
+                <field id="initial_height" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Initial Height</label>
+                    <comment>Set the initial height of the popup content when the Quick View starts, in pixel.</comment>
+                </field>
+                <field id="show_title" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Show Popup Title</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="show_button_go_to_product" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Show Button Go To Product</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="addition_css_class" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Extra Class</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

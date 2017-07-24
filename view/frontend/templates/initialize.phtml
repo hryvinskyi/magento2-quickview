@@ -1,0 +1,36 @@
+<?php
+/**
+ * Copyright (c) 2017. Volodumur Hryvinskyi.  All rights reserved.
+ * @author: <mailto:volodumur@hryvinskyi.com>
+ * @github: <https://github.com/scriptua>
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Script\QuickView\Block\Initialize */
+
+$helper = $block->objectManager->create('Script\QuickView\Helper\Data');
+?>
+<?php if($helper->getGeneralConfig('general/enable')): ?>
+<script type="text/x-magento-init">
+{
+	"*":{
+		"script_quickview": {
+			"baseUrl": "<?= $block->getConfig('baseUrl'); ?>",
+			"btnLabel": "<?= $helper->getGeneralConfig('general/button_label') ?>",
+			"itemClass": "<?= $helper->getGeneralConfig('general/item_class') ?>",
+			"btnContainer": "<?= $helper->getGeneralConfig('general/btn_container') ?>",
+			"showPopupTitle": <?= $helper->getGeneralConfig('popup_settings/show_title') ?>,
+			"popupTitle": "Script Quick View",
+			"currentText": "Product {current} of {total}",
+			"showButtonGoToProduct": <?= $helper->getGeneralConfig('popup_settings/show_button_go_to_product') ?>,
+            "transition": "<?= $helper->getGeneralConfig('popup_settings/transition') ?>",
+            "speed": "<?= $helper->getGeneralConfig('popup_settings/transition_speed') ?>",
+            "initialWidth": "<?= $helper->getGeneralConfig('popup_settings/initial_width') ?>",
+            "initialHeight": "<?= $helper->getGeneralConfig('popup_settings/initial_height') ?>",
+            "additionClass": "<?= $helper->getGeneralConfig('popup_settings/addition_css_class') ?>"
+		}
+	}
+}
+</script>
+<?php endif; ?>

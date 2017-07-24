@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) 2017. Volodumur Hryvinskyi.  All rights reserved.
+  ~ @author: <mailto:volodumur@hryvinskyi.com>
+  ~ @github: <https://github.com/scriptua>
+  -->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <head>
+    <css src="mage/gallery/gallery.css"/>
+    <css src="Magento_Swatches::css/swatches.css"/>
+    <css src="Script_QuickView::css/quickview.css"/>
+  </head>
+  <body>
+    <referenceContainer name="before.body.end">
+      <block class="Script\QuickView\Block\Initialize" name="script.quickview.initialize"
+             template="Script_QuickView::initialize.phtml"/>
+    </referenceContainer>
+  </body>
+</page>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) 2017. Volodumur Hryvinskyi.  All rights reserved.
+  ~ @author: <mailto:volodumur@hryvinskyi.com>
+  ~ @github: <https://github.com/scriptua>
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <script>
+            <general>
+                <enable>1</enable>
+                <button_label>Quick View</button_label>
+                <item_class>.product-item</item_class>
+                <btn_container>.product-item-info</btn_container>
+            </general>
+            <popup_settings>
+                <transition>elastic</transition>
+                <transition_speed>300</transition_speed>
+                <initial_width>120</initial_width>
+                <initial_height>120</initial_height>
+                <show_title>0</show_title>
+                <show_button_go_to_product>1</show_button_go_to_product>
+                <addition_css_class></addition_css_class>
+            </popup_settings>
+        </script>
+    </default>
+</config>

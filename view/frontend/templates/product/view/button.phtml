@@ -1,0 +1,9 @@
+<?php
+
+$_product = $block->getProduct();
+?>
+<div id="btnGotoProduct" class="btn-go-to-product">
+    <a target="_blank" href="<?= $_product->getUrlModel()->getUrl($_product) ?>" title="Go To Product" class="action primary">
+        <span>Go To Product</span>
+    </a>
+</div>
