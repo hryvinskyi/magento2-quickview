@@ -3,8 +3,8 @@
     "description": "Script QuickView Module",
     "require": {
         "php": "~5.6.5|7.0.2|7.0.4|~7.0.6",
-        "magento/module-catalog": "101.* | 100.*",
-	"scriptua/magento2-base": "*"
+        "magento/module-catalog": "102.* |101.* | 100.*",
+	    "scriptua/magento2-base": "*"
     },
     "type": "magento2-module",
     "version": "0.0.3",
