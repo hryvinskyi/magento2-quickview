@@ -4,19 +4,13 @@
  * @github: <https://github.com/scriptua>
  */
 
-(function (factory) {
-    if (typeof define === "function" && define.amd) {
-        define([
-            "jquery",
-            'mage/translate',
-            'Magento_Customer/js/customer-data',
-            'Magento_Catalog/product/view/validation',
-            'colorBox'
-        ], factory);
-    } else {
-        factory(jQuery);
-    }
-}(function ($, $t, $cd) {
+define([
+    "jquery",
+    'mage/translate',
+    'Magento_Customer/js/customer-data',
+    'Magento_Catalog/product/view/validation',
+    'colorBox'
+], function ($, $t, $cd) {
     "use strict";
 
     $.widget(
@@ -76,7 +70,7 @@
             },
             _bindColorbox: function (config) {
                 var self = this;
-                $('.' + config.handlerClassName).each(function (i, el) {
+                $('.' + config.handlerClassName).each(function () {
                     $(this).colorbox({
                         className: config.additionClass,
                         maxWidth: config.maxWidth,
@@ -268,4 +262,4 @@
     );
 
     return $.script.QuickView;
-}));
+});
