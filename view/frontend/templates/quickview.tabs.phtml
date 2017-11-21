@@ -1,6 +1,31 @@
+<?php
+/**
+ * Copyright (c) 2017. Volodumur Hryvinskyi.  All rights reserved.
+ * @author: <mailto:volodumur@hryvinskyi.com>
+ * @github: <https://github.com/scriptua>
+ */
+
+use Script\Base\Helpers\Html;
+
+?>
 <?php if ($quickshopGroup = $block->getGroupChildNames('quickview_tabs', 'getChildHtml')): ?>
     <?php $layout = $block->getLayout(); ?>
-    <div id="script-quick-view-tabs" class="product data items" data-mage-init='{"tabs":{"openedState":"active","content":".qs-content","header":".qs-title","collapsibleElement":".qs-title"}}'>
+    <?php
+    echo Html::beginTag('div', [
+        'id' => 'script-quick-view-tabs',
+        'class' => ['product', 'data', 'items'],
+        'data' => [
+            'mage-init' => [
+                'tabs' => [
+                    'openedState' => 'active',
+                    'content' => '.qs-content',
+                    'header' => '.qs-title',
+                    'collapsibleElement' => '.qs-title'
+                ]
+            ]
+        ]
+    ]);
+    ?>
         <?php foreach ($quickshopGroup as $name): ?>
             <?php
             $html = $layout->renderElement($name);

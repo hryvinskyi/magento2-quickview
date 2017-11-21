@@ -4,10 +4,10 @@
     "require": {
         "php": "~5.6.5|7.0.2|7.0.4|~7.0.6",
         "magento/module-catalog": "102.* |101.* | 100.*",
-	    "scriptua/magento2-base": "*"
+	    "scriptua/magento2-base": "1.0.*"
     },
     "type": "magento2-module",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "GNU-3.0",
     "autoload": {
         "files": [

@@ -66,18 +66,18 @@
                 <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart" as="addtocart" template="product/view/addtocart.phtml"/>
               </container>
               <block class="Magento\Framework\View\Element\Template" name="product.info.form.options" as="options_container">
-                <block class="Magento\Catalog\Block\Product\View" name="product.info.options.wrapper" as="product_options_wrapper" template="product/view/options/wrapper.phtml">
-                  <block class="Magento\Catalog\Block\Product\View\Options" name="product.info.options" as="product_options" template="product/view/options.phtml">
-                    <block class="Magento\Catalog\Block\Product\View\Options\Type\DefaultType" as="default" template="product/view/options/type/default.phtml"/>
-                    <block class="Magento\Catalog\Block\Product\View\Options\Type\Text" as="text" template="product/view/options/type/text.phtml"/>
-                    <block class="Magento\Catalog\Block\Product\View\Options\Type\File" as="file" template="product/view/options/type/file.phtml"/>
-                    <block class="Magento\Catalog\Block\Product\View\Options\Type\Select" as="select" template="product/view/options/type/select.phtml"/>
-                    <block class="Magento\Catalog\Block\Product\View\Options\Type\Date" as="date" template="product/view/options/type/date.phtml"/>
+                <block class="Magento\Catalog\Block\Product\View" name="product.info.options.wrapper" as="product_options_wrapper" template="Magento_Catalog::product/view/options/wrapper.phtml">
+                  <block class="Magento\Catalog\Block\Product\View\Options" name="product.info.options" as="product_options" template="Magento_Catalog::product/view/options.phtml">
+                    <block class="Magento\Catalog\Block\Product\View\Options\Type\DefaultType" name="product.info.options.default" as="default" template="Magento_Catalog::product/view/options/type/default.phtml"/>
+                    <block class="Magento\Catalog\Block\Product\View\Options\Type\Text" name="product.info.options.text" as="text" template="Magento_Catalog::product/view/options/type/text.phtml"/>
+                    <block class="Magento\Catalog\Block\Product\View\Options\Type\File" name="product.info.options.file" as="file" template="Magento_Catalog::product/view/options/type/file.phtml"/>
+                    <block class="Magento\Catalog\Block\Product\View\Options\Type\Select" name="product.info.options.select" as="select" template="Magento_Catalog::product/view/options/type/select.phtml"/>
+                    <block class="Magento\Catalog\Block\Product\View\Options\Type\Date" name="product.info.options.date" as="date" template="Magento_Catalog::product/view/options/type/date.phtml"/>
                   </block>
                   <block class="Magento\Framework\View\Element\Html\Calendar" name="html_calendar" as="html_calendar" template="Magento_Theme::js/calendar.phtml"/>
                 </block>
-                <block class="Magento\Catalog\Block\Product\View" name="product.info.options.wrapper.bottom" as="product_options_wrapper_bottom" template="product/view/options/wrapper/bottom.phtml">
-                  <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart.additional" as="product.info.addtocart" template="product/view/addtocart.phtml"/>
+                <block class="Magento\Catalog\Block\Product\View" name="product.info.options.wrapper.bottom" as="product_options_wrapper_bottom" template="Magento_Catalog::product/view/options/wrapper/bottom.phtml">
+                  <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart.additional" as="product.info.addtocart" template="Magento_Catalog::product/view/addtocart.phtml"/>
                 </block>
               </block>
             </block>
@@ -143,6 +143,15 @@
             <block class="Magento\Review\Block\Product\Review" name="reviews" as="reviews" template="Magento_Review::review.phtml" group="detailed_info">
               <block class="Magento\Review\Block\Form" name="product.review.form" as="review_form">
                 <container name="product.review.form.fields.before" as="form_fields_before" label="Review Form Fields Before"/>
+                <arguments>
+                  <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                      <item name="review-form" xsi:type="array">
+                        <item name="component" xsi:type="string">Magento_Review/js/view/review</item>
+                      </item>
+                    </item>
+                  </argument>
+                </arguments>
               </block>
             </block>
           </block>

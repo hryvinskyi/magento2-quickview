@@ -1,9 +1,21 @@
 <?php
+/**
+ * Copyright (c) 2017. Volodumur Hryvinskyi.  All rights reserved.
+ * @author: <mailto:volodumur@hryvinskyi.com>
+ * @github: <https://github.com/scriptua>
+ */
 
-$_product = $block->getProduct();
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\Catalog\Block\Product\View */
+
+use \Script\Base\Helpers\Html;
+
 ?>
 <div id="btnGotoProduct" class="btn-go-to-product">
-    <a target="_blank" href="<?= $_product->getUrlModel()->getUrl($_product) ?>" title="Go To Product" class="action primary">
-        <span>Go To Product</span>
-    </a>
+    <?php echo Html::a('<span>' . __('Go To Product') . '</span>', $block->getProduct()->getProductUrl(), [
+        'target' => '_blank',
+        'title' => __('Go To Product'),
+        'class' => ['action', 'primary']
+    ]); ?>
 </div>

@@ -1,7 +1,8 @@
 <?php
 /**
- * Copyright © 2015 Magento. All rights reserved.
- * See COPYING.txt for license details.
+ * Copyright (c) 2017. Volodumur Hryvinskyi.  All rights reserved.
+ * @author: <mailto:volodumur@hryvinskyi.com>
+ * @github: <https://github.com/scriptua>
  */
 
 // @codingStandardsIgnoreFile
@@ -11,5 +12,7 @@
  *
  * @var $block \Magento\Catalog\Block\Product\View\Description
  */
-?>
-<?php /* @escapeNotVerified */ echo $this->helper('Magento\Catalog\Helper\Output')->productAttribute($block->getProduct(), $block->getProduct()->getDescription(), 'description') ?>
+
+/* @escapeNotVerified */
+echo $this->helper('Magento\Catalog\Helper\Output')
+    ->productAttribute($block->getProduct(), $block->getProduct()->getDescription(), 'description');
