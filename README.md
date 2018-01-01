@@ -1,4 +1,4 @@
-####Magento 2 Product QuickView Module
+#### Magento 2 Product QuickView Module
 
 # Installation Guide
 ````
@@ -8,7 +8,7 @@ bin/magento module:enable Script_QuickView
 bin/magento setup:upgrade
 ````
 
-#####Frontend view
+##### Frontend view
 ###### Button in grid catalog product
 ![Button in grid catalog product](http://hryvinskyi.com/images/hover_element.png)
 
