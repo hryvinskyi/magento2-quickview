@@ -1,13 +1,4 @@
-#### Magento 2 Product QuickView Module
-
-# Installation Guide
-````
-composer require scriptua/magento2-quickview
-bin/magento module:enable Script_Base
-bin/magento module:enable Script_QuickView
-bin/magento setup:upgrade
-````
-
+## Magento 2 Product QuickView Module
 Magento extension Quick View brings a convenient experience to the shoppers: for any item they pay attention to, only one click is needed to reach the item info. There will be no more loading page for product detail but a pop-up window with Add-to-Cart button appears in no time.
 
 ### Main Features:
@@ -30,7 +21,15 @@ Magento extension Quick View brings a convenient experience to the shoppers: for
 * Automatically apply the style of your chosen theme, so it helps to avoid potential conflict with any 3rd-party theme.
 * Fully Responsive
 
-##### Frontend view
+### Installation Guide
+````
+composer require scriptua/magento2-quickview
+bin/magento module:enable Script_Base
+bin/magento module:enable Script_QuickView
+bin/magento setup:upgrade
+````
+
+### Frontend view
 ###### Button in grid catalog product
 ![Button in grid catalog product](http://hryvinskyi.com/images/hover_element.png)
 
