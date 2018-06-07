@@ -2,12 +2,12 @@
     "name": "scriptua/magento2-quickview",
     "description": "Script QuickView Module",
     "require": {
-        "php": "~5.6.5|7.0.2|7.0.4|~7.0.6",
+        "php": "~7.0.0|~7.1.0|~7.2.0",
         "magento/module-catalog": "102.* |101.* | 100.*",
-	    "scriptua/magento2-base": "1.0.*"
+	    "scriptua/magento2-base": "1.1.*"
     },
     "type": "magento2-module",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "license": "GNU-3.0",
     "autoload": {
         "files": [

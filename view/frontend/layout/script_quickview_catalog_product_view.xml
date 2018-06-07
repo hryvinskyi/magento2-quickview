@@ -130,8 +130,8 @@
           <block name="product.reviews" class="Magento\Framework\View\Element\Template" template="Script_QuickView::quickview.content.phtml" group="quickview_tabs" after="-">
             <arguments>
               <argument translate="true" name="title" xsi:type="string">Reviews</argument>
-              <argument name="html_id" xsi:type="string">quickview-reviews</argument>
-              <argument name="html_class" xsi:type="string">quickview-reviews</argument>
+              <argument name="html_id" xsi:type="string">reviews</argument>
+              <argument name="html_class" xsi:type="string">reviews</argument>
             </arguments>
             <referenceBlock name="require-cookie">
               <arguments>

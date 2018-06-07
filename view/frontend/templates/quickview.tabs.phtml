@@ -37,7 +37,11 @@ use Script\Base\Helpers\Html;
             $contentClass = $block->getChildData($alias, 'html_class');
             $label = $block->getChildData($alias, 'title');
             ?>
-            <div class="data item title qs-title" aria-labeledby="tab-label-<?php echo $contentId; ?>-title">
+            <div class="data item title qs-title"
+                 aria-labeledby="tab-label-<?php echo $contentId; ?>-title"
+                 data-role="collapsible"
+                 id="tab-label-<?= /* @escapeNotVerified */ $contentId ?>"
+            >
                 <a class="data switch" tabindex="-1" data-role="trigger" href="#<?php echo $contentId; ?>" id="tab-label-<?php echo $contentId; ?>-title" data-toggle="switch">
                     <?php echo $label; ?>
                 </a>
