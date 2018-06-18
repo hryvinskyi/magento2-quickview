@@ -21,7 +21,7 @@
             <block class="Magento\ConfigurableProduct\Block\Product\View\Type\Configurable" name="product.info.options.configurable" as="options_configurable" before="-" template="Magento_ConfigurableProduct::product/view/type/options/configurable.phtml"/>
         </referenceBlock>
 		<!-- SWATCHES -->
-		<!--referenceContainer name="product.info.options.configurable" remove="true"/-->
+		<referenceContainer name="product.info.options.configurable" remove="true" />
         <referenceBlock name="product.info.options.wrapper">
             <block class="Magento\Swatches\Block\Product\Renderer\Configurable" name="product.info.options.swatches" as="swatch_options" before="-" />
         </referenceBlock>
