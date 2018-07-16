@@ -1,14 +1,18 @@
 <?php
 /**
- * Copyright (c) 2017. Volodumur Hryvinskyi.  All rights reserved.
+ * Copyright (c) 2018. Volodumur Hryvinskyi.  All rights reserved.
  * @author: <mailto:volodumur@hryvinskyi.com>
  * @github: <https://github.com/scriptua>
  */
 
+use Magento\Checkout\Helper\Cart;
+
 // @codingStandardsIgnoreFile
 
-/** @var $block \Script\QuickView\Block\Initialize */
-
+/**
+ * @var $block      \Script\QuickView\Block\Initialize
+ * @var $helper     \Script\QuickView\Helper\Data
+ */
 $helper = $block->objectManager->create('Script\QuickView\Helper\Data');
 ?>
 <?php if($helper->getGeneralConfig('general/enable')): ?>
@@ -28,7 +32,8 @@ $helper = $block->objectManager->create('Script\QuickView\Helper\Data');
             "speed": "<?= $helper->getGeneralConfig('popup_settings/transition_speed') ?>",
             "initialWidth": "<?= $helper->getGeneralConfig('popup_settings/initial_width') ?>",
             "initialHeight": "<?= $helper->getGeneralConfig('popup_settings/initial_height') ?>",
-            "additionClass": "<?= $helper->getGeneralConfig('popup_settings/addition_css_class') ?>"
+            "additionClass": "<?= $helper->getGeneralConfig('popup_settings/addition_css_class') ?>",
+            "redirectToCart": <?= $helper->getConfigValue(Cart::XML_PATH_REDIRECT_TO_CART) ?>
 		}
 	}
 }

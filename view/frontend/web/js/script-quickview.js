@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017. Volodumur Hryvinskyi.  All rights reserved.
+ * Copyright (c) 2018. Volodumur Hryvinskyi.  All rights reserved.
  * @author: <mailto:volodumur@hryvinskyi.com>
  * @github: <https://github.com/scriptua>
  */
@@ -18,6 +18,7 @@ define([
         {
             options: {
                 baseUrl: '/',
+                cartUrl: '/checkout/cart',
                 showPopupTitle: true,
                 popupTitle: $t('Script Quick View'),
                 currentText: $t('Product {current} of {total}'),
@@ -40,7 +41,8 @@ define([
                 addToCartButtonTextAdded: $t('Added'),
                 addToCartButtonTextDefault: $t('Add to Cart'),
                 addToCartStatusSelector: 'script-add-cart-status',
-                minicartSelector: '[data-block="minicart"]'
+                minicartSelector: '[data-block="minicart"]',
+                redirectToCart: false
             },
             _create: function () {
                 if (!$('body').hasClass('catalog-product-view')) {
@@ -194,7 +196,10 @@ define([
             },
             submitForm: function (form) {
                 var self = this;
-                if (form.has('input[type="file"]').length && form.find('input[type="file"]').val() !== '') {
+                if (
+                    (form.has('input[type="file"]').length && form.find('input[type="file"]').val() !== '')
+                    || self.options.redirectToCart === 1
+                ) {
                     self.element.off('submit');
                     form.submit();
                 } else {
