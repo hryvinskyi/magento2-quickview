@@ -3,11 +3,11 @@
   "description": "Script QuickView Module",
   "require": {
     "php": "~7.0.0|~7.1.0|~7.2.0",
-    "magento/module-catalog": "102.* |101.* | 100.*",
+    "magento/module-catalog": "103.* |102.* |101.* | 100.*",
     "scriptua/magento2-base": "1.1.*"
   },
   "type": "magento2-module",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "GPL-3.0",
   "autoload": {
     "files": [
