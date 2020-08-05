@@ -32,6 +32,11 @@ bin/magento setup:upgrade
 ### Frontend view
 ###### Button in grid catalog product
 ![Button in grid catalog product](http://hryvinskyi.com/images/hover_element.png)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhryvinskyi%2Fmagento2-quickview.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhryvinskyi%2Fmagento2-quickview?ref=badge_shield)
 
 ###### Open popup product
 ![Open popup product](http://hryvinskyi.com/images/popup.jpg)
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhryvinskyi%2Fmagento2-quickview.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhryvinskyi%2Fmagento2-quickview?ref=badge_large)
